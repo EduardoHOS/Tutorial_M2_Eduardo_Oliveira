@@ -22,13 +22,14 @@ app.get('/usuarios', (req, res) => {
 	res.setHeader('Access-Control-Allow-Origin', '*');
 	var db = new sqlite3.Database(DBPATH); // Abre o banco
 	var sql = 'SELECT * FROM usuario ORDER BY nome_completo COLLATE NOCASE';
-		db.all(sql, [],  (err, rows ) => {
-			if (err) {
-				throw err;
-			}
-			res.json(rows);
-		});
-		db.close(); // Fecha o banco
+	
+	db.all(sql, [],  (err, rows ) => {
+		if (err) {
+			throw err;
+		}
+		res.json(rows);
+	});
+	db.close(); // Fecha o banco
 });
 
 // Insere um registro (é o C do CRUD - Create)
@@ -37,6 +38,7 @@ app.post('/insereUsuario', urlencodedParser, (req, res) => {
 	res.setHeader('Access-Control-Allow-Origin', '*'); 
 	var db = new sqlite3.Database(DBPATH); // Abre o banco
 	sql = "INSERT INTO usuario (nome_completo, email, telefone, idade) VALUES ('" + req.body.nome + "', '" + req.body.email + "', '" + req.body.telefone + "', '" + req.body.idade + "')";
+	sql = `INSERT INTO usuario ${teste}, `
 	console.log(sql);
 	db.run(sql, [],  err => {
 		if (err) {

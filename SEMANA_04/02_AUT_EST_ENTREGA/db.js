@@ -13,8 +13,12 @@ app.use(express.static("./html/index.html/"));
 
 app.use(express.json());
 
+//pega tudo 
+app.listen(port, hostname, () => {
+	console.log(`Servidor rodando em http://${hostname}:${port}/`);
+  });
 
-// Tabela profile_tbl
+// Tabela profile_tbl ***********************************************************************************************************************************************************
 
 // Retorna todos registros (é o R do CRUD - Read)
 app.get('/perfil', (req, res) => {
@@ -104,13 +108,8 @@ app.get('/removePerfil', urlencodedParser, (req, res) => {
 	db.close(); // Fecha o banco
 });
 
-//pega tudo 
-app.listen(port, hostname, () => {
-	console.log(`Servidor rodando em http://${hostname}:${port}/`);
-  });
 
-
-  // Tabela experiencia ****************************************************************************************************8
+  // Tabela experiencia ********************************************************************************************************************************
 
   //get date
   app.get('/experiencia', (req, res) => {
@@ -134,7 +133,7 @@ app.post('/experiencia', urlencodedParser, (req, res) => {
 	res.setHeader('Access-Control-Allow-Origin', '*'); 
 	var db = new sqlite3.Database(DBPATH); 
 	console.log(req.body.id_perfil)
-	sql = `INSERT INTO experiencia (id_experiencia, nome_da_empresa, d_inicio, d_termino, cargo, descricao, id_perfil) VALUES ('${req.body.id_experiencia}', '${req.body.nome_da_empresa}', '${req.body.d_inicio}', '${req.body.d_termino}', '${req.body.cargo}','${req.body.descricao}','${req.body.id_perfil})`;
+	sql = `INSERT INTO experiencia (id_experiencia, nome_da_empresa, d_inicio, d_termino, cargo, descricao) VALUES ('${req.body.id_experiencia}', '${req.body.nome_da_empresa}', '${req.body.d_inicio}', '${req.body.d_termino}', '${req.body.cargo}','${req.body.descricao}')`;
 	console.log(sql);
 	db.run(sql, [],  err => {
 		if (err) {
@@ -220,7 +219,7 @@ app.post('/formacao', urlencodedParser, (req, res) => {
 	res.setHeader('Access-Control-Allow-Origin', '*'); 
 	var db = new sqlite3.Database(DBPATH); 
 	console.log(req.body.id_curso)
-	sql = `INSERT INTO formacao (id_curso, d_inicio, d_termino, cargo, descricao) VALUES ('${req.body.id_curso}', '${req.body.d_inicio}', '${req.body.d_termino}', '${req.body.descricao}')`;
+	sql = `INSERT INTO formacao (id_curso, d_inicio, d_termino, cargo, descricao) VALUES ('${req.body.id_curso}', '${req.body.d_inicio}', '${req.body.d_termino}','${req.body.cargo}','${req.body.descricao}')`;
 	console.log(sql);
 	db.run(sql, [],  err => {
 		if (err) {
@@ -306,7 +305,7 @@ app.post('/habilidades', urlencodedParser, (req, res) => {
 	res.setHeader('Access-Control-Allow-Origin', '*'); 
 	var db = new sqlite3.Database(DBPATH); 
 	console.log(req.body.id_curso)
-	sql = `INSERT INTO habilidades (id_habilidade, habilidade1, habilidade2, habilidade3, habilidade4, hbailidade5) VALUES ('${req.body.id_habilidades}', '${req.body.habilidade1}', '${req.body.habilidade2}', '${req.body.habilidade3}', '${req.body.habilidade4}','${req.body.habilidade5}')`;
+	sql = `INSERT INTO habilidades (id_habilidades, habilidade1, habilidade2, habilidade3, habilidade4, habilidade5) VALUES ('${req.body.id_habilidades}', '${req.body.habilidade1}', '${req.body.habilidade2}', '${req.body.habilidade3}', '${req.body.habilidade4}','${req.body.habilidade5}')`;
 	console.log(sql);
 	db.run(sql, [],  err => {
 		if (err) {

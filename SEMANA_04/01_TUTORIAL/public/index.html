@@ -18,8 +18,43 @@
 		</div>
 		<button onclick="calcula(10, 50)" class="button-calc">Calcular 10 + 50</button>
 		<br>
+		<h1>Calculadora</h1>
+		<div id="calc" class="sections">
+			<h3>Fazendo alguns cálculos</h3>
+			<div>
+				<label for="num1">Número 1:</label>
+				<input type="number" id="num1" name="num1">
+			</div>
+			<div>
+				<label for="num2">Número 2:</label>
+				<input type="number" id="num2" name="num2">
+			</div>
+			<div>
+				<label for="op">Operação:</label>
+				<select id="op" name="op">
+					<option value="+">+</option>
+					<option value="-">-</option>
+					<option value="*">x</option>
+					<option value="/">:</option>
+				</select>
+			</div>
+			<br><br>
+			<div>
+				<button onclick="calcula()" class="button-calc">Calcular</button>
+			</div>
+		<br>
 		<div id="saida"></div>
+		</div>
+
+
+
 	</div>
 	<script src="script.js"></script>qweqw
+
+
+
+
+
+
 </body>
 </html>

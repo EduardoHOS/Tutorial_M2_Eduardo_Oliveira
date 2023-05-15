@@ -5,7 +5,24 @@ function calcula(x, y){
     if (op == "+") {
         resultado = x + y;
     };
-    document.getElementById("saida").innerHTML = `${x} ${op} ${y} = ${resultado}`;
-    console.log(`<br /> ${x} ${op} ${y} = ${resultado}`)
 }
 
+function calcula(){
+	var num1 = Number(document.getElementById("num1").value);
+	var num2 = Number(document.getElementById("num2").value);
+	var op = document.getElementById("op").value;
+	var resultado;
+	
+	if (op == "+") {
+		resultado = num1 + num2;
+	} else if (op == "-") {
+		resultado = num1 - num2;
+	} else if (op == "*") {
+		resultado = num1 * num2;
+	} else if (op == "/") {
+		resultado = num1 / num2;
+	};
+	
+	document.getElementById("saida").innerHTML = `${num1} ${op} ${num2} = ${resultado}`;
+	console.log(`${num1} ${op} ${num2} = ${resultado}`)
+}

@@ -15,6 +15,13 @@ app.use(express.static("../frontend/"));
 function obterColID(nome_col) {
 	var db = new sqlite3.Database(DBPATH); // Abre o banco
 	var id_col = 0;
+	var sql = `SELECT ID_COLETOR FROM TblColetor WHERE NOME_COLETOR = '${nome_col}';`
+	db.all(sql,[],(err, rows) =>{
+		if(err){
+			throw err;
+		}
+		res.json(rows);
+	})
 	//TODO Here we are going to query the database to get the ID corresponding to the "name_col"
 	return(id_col);
 };
@@ -22,7 +29,7 @@ function obterColID(nome_col) {
 /******** CRUD ************/
 app.use(express.json());
 // Retorna todos registros (é o R do CRUD - Read)
-app.get('/coletores', (req, res) => {
+app.get('/coletores', (req, res) => {														
 	res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
 	var db = new sqlite3.Database(DBPATH); // Abre o banco
@@ -71,7 +78,7 @@ app.post('/protinsertcol', urlencodedParser, (req, res) => {
 	res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
 	//TODO the following line calls the above function based on the "COLETOR's name"
 	var idcol = obterColID(req.body.nome_col);	
-	sql = "INSERT INTO TblPROTOCOLO (ID_PROTOCOLO,ID_COLETOR, NOME_PROTOCOLO) " + 
+	sql = "INSERT INTO TblPROTOCOLO (ID_PROTOCOLO,ID_COLETOR, NOME_PROTOCOLO) VALUES ('"+ idcol+"', '" + req.body.id_coletor + ", '" + req.body.nome_protocolo + "')" + 
 		//TODO Create the "VALUES" part of the INSERT. Pay attention that some values will come from the REQUEST plus the idcol above
 	console.log(sql);
 	var db = new sqlite3.Database(DBPATH); // Abre o banco

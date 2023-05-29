@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    //select the button and give the ability to hide
+    $(document).ready(function(){
+      $("#esconder").click(function(){
+        $("main").hide(1000);
+      });
+      //gives to the button the ability to show 
+      $("#mostrar").click(function(){
+        $("main").show(1000);
+      });
+      $("#user_part").mouseenter(function(){
+    alert("Chegou sua vez de preecher!!! Amasaa e mostra como seu curriculo é lindo✨");
+  });
+      
+    });
+  </script>
+    <title>Resume</title>
+</head>
+<body>
+
+    <main>
+    <header>
+        <div>
+            <img class="foto" src=".\Img\logo.png" alt="Logotipo Inteli">
+        </div>
+        <div>
+            <h2>Eduardo HOS</h2><br>
+            <h4>Sistemas de Informação</h4>
+        </div>
+        <br>
+    </header>
+
+    <aside class="aside">
+        <section class="sobre_mim">
+            <h2>Sobre mim</h2><br>
+
+            <div class="linha">
+                <div class="icone_lugar">
+                    <img width="48" height="48" src="https://img.icons8.com/material-rounded/96/marker.png" alt="marker"/>
+                </div>
+                <div class="texto">
+                    <p> São Paulo - SP </p>	
+                </div>
+            </div> 
+
+            <div class="linha">
+                <div class="icone_lugar">
+                    <img width="48" height="48" src="https://img.icons8.com/ios-filled/100/phone.png" alt="phone"/>
+                </div>
+                <div class="texto">
+                    <p>(11)984516736</p>
+                </div>
+            </div> 
+
+            <div class="linha">
+                <div class="icone_lugar">
+                    <img width="48" height="48" src="https://img.icons8.com/fluency-systems-filled/96/new-post.png" alt="new-post"/>
+                </div>
+                <div class="texto">
+                    <p>eduardo.oliveira@sou.inteli.edu.br</p>
+                </div>
+            </div>
+            
+            <div class="linha"> 
+                <p>Com conhecimento em Desenvolvimento de Web, animação, gamificação e Design, está cursando Sistemas de Informação no Inteli por Bolsa de Mérito. Tem foco em aprender mais sobre gestão e aplicação de programação com design integrado.</p>
+            </div>
+               
+           
+        </section>
+    
+        <section class="honras" >
+            <h3>Honras</h3>
+                <p>Challenge Web -
+                    Menção Honrosa - 2018
+                    e 2019</p>
+                <p>Olimpíada Nacional de
+                    Ciências - Menção
+                    Honrosa (ONC) - 2020</p>
+                <p>Aprovado no Take
+                    Action Lab do Global
+                    Citizen, 2023</p>
+        <br>
+        </section>
+    
+        <section class="personalidade">
+            <h3>Personalidade</h3>
+                <p>Inglês</p>
+                <p>Liderança</p>
+                <p>Comunicação</p>
+                <p>Resiliência</p>
+                <p>Responsabilidade</p>
+                <p>Design</p>
+        <br>
+        </section>
+    
+    </aside>
+     
+    <section class="formacao">
+        <div class="titulo_formacao"><h2>Formação</h2></div><br>
+            <div class="cursos" id="curso1">
+                <b>Colégio São Lucas| 2010-2021 </b>
+                <p>Ensino Fundamental e Médio na escola com o maior ranking de nota no Enem na região de Taboão da Serra</p>
+            </div>
+            <br>
+            <div class="cursos" id="curso2">
+                <b>Senac Lapa Scipião| 2022-2023 </b>
+                <p>Formado em Técnico em Multimidia, possuindo projetos na area da animação, aplicação web e jogos.</p>
+            </div>
+            <br>
+            <div class="cursos" id="curso3">
+                <b>Inteli| 2023 </b>
+                <p>Cursando Sistemas de Informação no Instituto de técnologia e liderança</p>
+            </div><br>
+    </section>
+<!-- Experiencias  -->
+
+    <section class="experiencia">
+        <div class="titulo_formacao"><h2>Experiênciao</h2></div> <br>
+            <div class="empresa" id="empresa1">
+                <b>UFAL | 2023 - Programador e Designer </b>
+                <p>Desenvolvido em jogo voltado para ensino de lógica de programação e matemática para crianças, tendo como parceiro de projeto a Universidade Federal do Alagoas (UFAL).</p>
+            </div>
+            <br>
+            <div class="empresa" id="empresa2">
+                <b>Otica Yervant | 2018-2023 - Atendente </b>
+                <p>Trabalhou na recepção de clientes, venda, reparo de óculos e auxiliou na administração financeira</p>
+            </div>
+            <br>
+            <div class="empresa" id="empresa3">
+                <b>Natura| 2023 - Desenvolvedor Web </b>
+                <p>Com o desafio de integrar produtores com pesquisadores, desenvolveu em equipe plataforma que funciona ofline e que em rede wifi consegue sincronizar dados salvos localmente.</p>
+            </div>
+            <br>
+    </section>
+    
+<!-- Realizações -->
+
+    <section class="realizacoes">
+        <div class="titulo_realizacoes"><h2>Realizações</h2></div><br>
+            <div class="realizacoes" id="realizacao1">
+                <b>Pacote Office| 2016 </b>
+                <p>Microsoft Word e PowerPoint 2016 - Básico</p>
+            </div>
+            <br>
+            <div class="realizacoes" id="realizacao2">
+                <b>Gestão de tempo | 2020 </b>
+                <p> Curso online do sistema Mooc que foca na gestão de tempo pessoal com trbalho e estudos.</p>
+            </div><br>
+
+            <div class="realizacoes" id="realizacao2">
+                <b>LALA| 2021 </b>
+                <p>Membro da Academia de Liderança da América Latina (LALA)</p>
+            </div><br>
+
+            <div class="realizacoes" id="realizacao2">
+                <b>ConnecThem| 2021 </b>
+                <p>Diretor de Design da ConneThem, levando organização de 0 a mais de 1000 seguidores em menos de 6 meses.</p>
+            </div><br>
+
+            <div class="realizacoes" id="realizacao2">
+                <b>Presidente Estudantil| 2021 </b>
+                <p>Criou o cargo de Presidente estudantil no Colégio São Lucas.</p>
+            </div><br>
+
+            <div class="realizacoes" id="realizacao2">
+                <b>Climate Science | 2020-2023 </b>
+                <p>Participu da Climate Science, organização voltada a democratização de acesso ao conhecimento sobre meio ambiente, iniando como voluntario de eventos, sendo promovido a diretor de eventos do estado de São Paulo até se tornar Coordenadors do estado.</p>
+            </div><br>
+
+            <div class="realizacoes" id="realizacao2">
+                <b>Campanha Gratiluz| 2021-2023 </b>
+                <p>Fundador da Campanha Gratiluz, organização que visa empatia, estimulado a doação de Sangue.</p>
+            </div><br>
+
+            <div class="realizacoes" id="realizacao2">
+                <b>Representante de turma| 2023 </b>
+                <p>Um dos 9 representantes de turma do Inteli, Instituto de técnologia e liderança.</p>
+            </div><br>
+        </main>
+
+            <button id="esconder"> Esconder curriculo </button>
+            <br>
+            <button id="mostrar">Mostrar</button>
+ 
+    </section>
+
+
+    <h2 style="width: 300px; margin-left: 37%;"  id="user_part">Crie também seu curriculo !!!</h2>
+
+
+    <section class="db_manipulacao">
+        <h3>Profile</h3> 
+
+        <form action="">
+            <label for="name">Nome:</label><br>
+            <input type="text" id="nome" name="nome"><br>
+            <label for="descricao">Descrição:</label><br>
+            <input type="text" id="descricao" name="descricao"><br>
+            <label for="lname">Idade:</label><br>
+            <input type="text" id="idade" name="idade">
+            <br><br>
+            <input class="button" type="submit" value="Salvar">
+        </form>
+
+    </section>
+    <section class="db_manipulacao">
+        <h3>Experiencia</h3>
+
+        <form action="">
+            <label for="name_empresa">Nome da empresa:</label><br>
+            <input type="text" id="nome_empresa" name="nome_empresa"><br>
+            <label for="d_inicio">Data de inicio:</label><br>
+            <input type="text" id="d_inicio" name="d_inicio"><br>
+            <label for="d_fim">Data de finalização:</label><br>
+            <input type="text" id="d_fim" name="d_fim"><br>
+            <label for="cargo">Cargo:</label><br>
+            <input type="text" id="cargo" name="cargo"><br>
+            <label for="descricao_experiencia">Descrição da experiencia:</label><br>
+            <input type="text" id="descricao_experiencia" name="descricao_experiencia">
+            <br><br>
+            <input class="button" type="submit" value="Salvar">
+        </form>
+    </section>
+
+    <section class="db_manipulacao">
+        <h3>Formação</h3>
+    </section>
+
+    <section class="db_manipulacao">
+        <h3>Habilidades</h3>
+    </section>
+
+    <section class="db_manipulacao">
+        <h3>Head Curriculo</h3>
+    </section>
+
+    <section class="db_manipulacao">
+        <h3>Personalidades</h3>
+    </section>
+
+    <section class="db_manipulacao">
+        <h3>Realizações</h3>
+    </section>
+
+
+<!-- <script src="db.js">
+$(document).ready(function(){
+  $("button").click(function(){
+    $("main").hide();
+  });
+});
+
+
+</script> -->
+</body>
+
+<footer>
+    <p>©eduardoHOS</p>
+</footer>
+    
+</html>

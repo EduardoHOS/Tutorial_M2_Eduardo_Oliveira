@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+  }
+  
+  html {
+    font-family: "Lucida Sans", sans-serif;
+    max-width: 1080px;
+    align-items: center;
+    align-content: center;
+    margin: auto;
+  }
+  
+  header {
+    background-color: #ffffff;
+    color: #000000;
+    display: inline;
+    text-align: center;
+  }
+  
+ .foto{
+    max-width: 20%;
+    height: auto; 
+    }
+ 
+  aside {
+    background-color: #036082;
+    padding: 15px;
+    color: #ffffff;
+    float:right;
+    width: 30%;
+    text-align: justify;
+    height: 100%    ;
+    font-size: 14px;
+    margin-left: 20px;
+    border-radius: 15px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  }
+
+  .linha{
+    display: flex;
+    margin-bottom: 50px;
+  }
+
+  section, h2{
+    text-align: center;
+  }
+
+
+  section{background-color: #469fac;
+    border-radius: 15px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    text-align: left;
+  }
+.db_manipulacao{
+    background-color: #87c8d2;
+    align-self: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+button{
+  align-self: center;
+  border-radius: 15px;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  background-color: #01546f;
+  padding: 5px;
+  color: #ffffff;
+  font-size: 12px;
+  border-style: none;
+  margin-top: 20px;
+}
+
+button:hover{
+  background-color: #009fd4;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 16px;
+}
+
+.button{
+  background-color: #01546f;
+  padding: 5px;
+  color: #ffffff;
+  font-size: 12px;
+}
+
+.button:hover{
+  background-color: #009fd4;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 16px;
+
+}
+
+  input{
+    border-radius: 15px;
+    border-style: none;
+  }
+  
+ footer {
+    background-color: #01546f;
+    color: #ffffff;
+    text-align: center;
+    font-size: 12px;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 15px;
+  }
+
+  /*seletores para tablets*/
+@media screen and (max-width: 768px) {
+    body{
+	    width: 50%;
+        margin: auto;
+	}
+	aside{ 
+	   width: 100%;
+       float: none;
+       align-items: center;
+       align-self: center;
+       align-content: center;
+
+	}
+    section{
+        margin-right: 15px;
+    }
+    .aside{
+        padding: 10px;
+        margin: auto;
+    }
+
+    .formacao, .experiencia, .realizacoes{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+/*seletores para celurares*/
+@media screen and (max-width: 520px) {
+
+	body{ 
+	   width: 100%;
+       float: none;
+       height: auto;
+       text-align: center;
+	}
+	aside{ 
+	   width: 70%;
+	   float: none;
+       height: auto;
+       align-content: center;
+       align-items: center;
+       align-self: center;
+       padding-right: 15px;
+       margin-left: 60px;
+       padding-left: 15px;
+	}
+    section{
+        margin-left: 15px;
+        margin-right: 15px;
+        
+    }
+}
+  

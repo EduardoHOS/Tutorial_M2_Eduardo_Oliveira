@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+  }
+  
+  html {
+    font-family: 'Poppins', sans-serif;
+    max-width: 1080px;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    margin: auto;
+    background-color: #52B362;
+  }
+
+  div{
+    margin: 15px;
+  }
+
+  picture{
+    margin: 25px;
+  }
+
+  h1{
+    margin: 25px;
+  }
+
+  h2,h3{
+    margin: 15px;
+  }
+
+
+  body{
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin: 15px;
+    margin-left: 300px;
+    margin-right: 300px;
+  }
+
+  input{
+    border-radius: 15px;
+    border-color: #2c4f88;
+    border-style: solid;
+  }

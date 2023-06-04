@@ -1,0 +1,227 @@
+*{
+	margin: 0;
+}
+
+
+html{
+	font-family: 'Georgia', sans-serif;
+}
+html, body {
+    margin: 0px;
+    padding: 0px;
+}
+
+header{
+	width:100%;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    margin: auto;
+    background-color: #990000;
+}
+
+main{
+    width: 100%;
+    margin: auto;
+    background: #990000;
+}
+
+#duvidas{
+    width: 100%;
+    background: #990000 ;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+}
+
+.caixaduvidas{
+    width: 1150px;
+    margin: auto;
+    padding-top: 25px;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+}
+
+.pretinho{
+    color: black;
+    font-size: 25px;
+}
+
+.vermelhinho{
+    color: #990000;
+    font-size: 20 px;
+
+}
+
+.duvidaaas {
+    margin:0;
+    padding:0;
+    background: white;
+    min-height: 0;
+    display: inline-block; 
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border-radius: 30px;
+    max-width: 1150px;
+    padding: 30px;
+  }
+  .box{
+    background:blue;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+    backdrop-filter: blur( 8px );
+    -webkit-backdrop-filter: blur( 8px );
+    border-radius: 20px;
+    display: flex;
+    flex-direction:column;
+    padding:3em;
+    justify-content:center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 1150px;
+   /* padding: 40px;*/
+    transform: translate(-50%, -50%);
+  }
+  
+  .transition, p, ul li i:before, ul li i:after {
+    transition: all 0.25s ease-in-out;
+  }
+  
+  .flipIn, ul li {
+    animation: flipdown 0.5s ease both;
+  }
+  
+  .no-select, h2 {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  .aga1, .aga2 {
+    color: black;
+  }
+  
+  
+  .aga2 {
+    font-size: 18px;
+    line-height: 34px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    display: block;
+    margin: 0;
+    cursor: pointer;
+    margin-left: 15px;
+  }
+  
+   .duvidaaas p {
+    font-size: 15px;
+    line-height: 26px;
+    letter-spacing: 1px;
+    position: relative;
+    color: black;
+    overflow: hidden;
+    max-height: 900px;
+    opacity: 1;
+    transform: translate(0, 0);
+    margin-top: 14px;
+    margin-left: 25px;
+    margin-right: 15px;
+    z-index: 2;
+  }
+  
+  .duvidaaas ul {
+    list-style: none;
+    perspective: 900;
+    padding: 0;
+    margin: 0;
+  }
+  .duvidaaas ul li {
+    background-color: #D9D9D9;
+    position: relative;
+    padding-bottom: 18px;
+    padding-top: 18px;
+    border-radius: 30px;
+    margin-bottom: 10px;
+  }
+  
+
+  .duvidaaas ul li:last-of-type {
+    padding-bottom: 0;
+  }
+  .duvidaaas ul li i {
+    position: absolute;
+    transform: translate(-6px, 0);
+    margin-top: 16px;
+    right: 0;
+  }
+  .duvidaaas ul li i:before, ul li i:after {
+    content: "";
+    position: absolute;
+    background-color: #FFFFFF;
+    width: 3px;
+    height: 9px;
+  }
+  
+  .duvidaaas i{
+    margin-right: 25px;
+  }
+  
+  .duvidaaas ul li i:before {
+    transform: translate(-2px, 0) rotate(45deg);
+  }
+  .duvidaaas ul li i:after {
+    transform: translate(2px, 0) rotate(-45deg);
+  }
+  .duvidaaas ul li input[type=checkbox] {
+    position: absolute;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+  }
+  .duvidaaas ul li input[type=checkbox]:checked ~ p {
+    margin-top: 0;
+    max-height: 0;
+    opacity: 0;
+    transform: translate(0, 50%);
+  }
+  .duvidaaas ul li input[type=checkbox]:checked ~ i:before {
+    transform: translate(2px, 0) rotate(45deg);
+  }
+  .duvidaaas ul li input[type=checkbox]:checked ~ i:after {
+    transform: translate(-2px, 0) rotate(-45deg);
+  }
+  
+  @keyframes flipdown {
+    0% {
+      opacity: 0;
+      transform-origin: top center;
+      transform: rotateX(-90deg);
+    }
+    5% {
+      opacity: 1;
+    }
+    80% {
+      transform: rotateX(8deg);
+    }
+    83% {
+      transform: rotateX(6deg);
+    }
+    92% {
+      transform: rotateX(-3deg);
+    }
+    100% {
+      transform-origin: top center;
+      transform: rotateX(0deg);
+    }
+  }
+

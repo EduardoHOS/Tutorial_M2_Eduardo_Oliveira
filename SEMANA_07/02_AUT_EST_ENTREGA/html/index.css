@@ -108,7 +108,76 @@ button:hover{
     border-radius: 15px;
     border-style: none;
   }
-  
+
+  .envia_form{
+    align-self: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    
+  }
+
+  .button_envia{
+    padding: 10px;
+    border: #036082;
+    border-style: solid;
+  }
+
+  .button_envia:hover{
+    background-color: #036082;
+    color: #ffffff;
+    scale: 125%;
+  }
+
+  #main{
+    max-width: 800px;
+	  min-height: 100%;
+    border-radius: 15px;
+	  margin: 0 auto;
+	  background-color: #FFFFFF;
+	  padding: 1rem;
+    margin-top: 20px;
+	  text-align: center;
+  }
+
+  .perfil {
+    padding: 1rem;
+    margin: 1rem;
+    background-color: #F0F0F0;
+    text-align: left;
+    border-radius: 15px;
+  }
+  .title {
+    display: inline-block;
+  }
+  .actions {
+    display: block;
+    float: right;
+  }
+  .action {
+    display: inline-block;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+    color: #01546f;
+    cursor: pointer;
+  }
+  .action:hover {
+    text-decoration: underline;
+  }
+  .insert {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+    color: #01546f;
+    cursor: pointer;
+  }
+  .insert:hover {
+    text-decoration: underline;
+  }
+
  footer {
     background-color: #01546f;
     color: #ffffff;

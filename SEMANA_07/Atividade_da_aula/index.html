@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#duvidas").on({
+                mouseenter: function(){
+                $(this).css("background-color", "#990000");
+                },  
+                mouseleave: function(){
+                $(this).css("background-color", "#ac2323");
+                }, 
+                click: function(){
+                $(this).css("background-color", "#4b0909");
+                }  
+            });
+        });
+
+        function novaDuvida(){
+            var eDuvida = document.getElementById("nopai");
+            var noli = document.createElement('li');
+            var novainput = document.createElement('input');
+            novainput.type = 'checkbox';
+            var novai = document.createElement('i');
+            var novaDuvida = document.createElement('h2');
+            var novaColuna = document.createElement('p');
+            novaDuvida.innerHTML = "Devo ficar de jejum antes de doar sangue ?"
+            novaColuna.innerHTML = "Pelo contrário, deve estar bem alimentado (a) e assim evitar alimentos muito gordurosos nas três horas antecedentes a doação. Vale lembrar que após a doação são disponibilizados alimentos e líquido para ajudar na sua recuperação."
+            noli.appendChild(novainput)
+            noli.appendChild(novai)
+            noli.appendChild(novaDuvida)
+            noli.appendChild(novaColuna)
+            
+            eDuvida.appendChild(noli)
+        }
+
+    </script>
+
+</head>
+<body>
+    <main>
+        <section id="duvidas">
+            <div class="caixaduvidas">
+        <div class="titulo">
+            <h3 class="pretinho">Dúvidas</h3>
+            <h3 class="vermelhinho">Frequentes</h3>
+            <br>
+        </div>
+            
+            <div id="caixaduvida" class="duvidaaas">
+
+                    <ul id="nopai">
+                    <li>
+                        <input type="checkbox" checked>
+                        <i></i>
+                        <h2 class="aga2">Devo ficar de jejum antes de doar sangue ?</h2>
+                        <p>Pelo contrário, deve estar bem alimentado (a) e assim evitar alimentos muito gordurosos nas três horas antecedentes a doação. Vale lembrar que após a doação são disponibilizados alimentos e líquido para ajudar na sua recuperação.</p>
+                    </li>
+                    <li>
+                        <input type="checkbox" checked>
+                        <i></i>
+                        <h2 class="aga2">Qual é a idade minima para doar ?</h2>
+                        <p>A idade mínima é 16 anos com o consentimento dos responsáveis. É necessário um documento assinado com autorização dos pais.</p>
+                    </li>
+                    <li>
+                        <input type="checkbox" checked>
+                        <i></i>
+                        <h2 class="aga2">Quanto tempo dura a doação ?</h2>
+                        <p>Em média 45 minutos o processo todo, a doação em si dura em torno de 15 minutos.</p>
+                    </li>
+                    <li>
+                        <input type="checkbox" checked>
+                        <i></i>
+                        <h2 class="aga2">Quem tem diabetes pode doar ?</h2>
+                        <p>Se estiver controlada com apenas a alimentação ou hipoglicemiantes orais e não apresente alterações vasculares, poderá doar. Todavia se há uso de insulina, não poderá doar.</p>
+                    </li>
+                    </ul>
+                    <button onclick="novaDuvida()"> Nova duvida</button>
+                    </div>
+
+            </div>
+    </main>
+</body>
+</html>

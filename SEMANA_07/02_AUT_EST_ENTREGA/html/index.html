@@ -4,28 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
+    <!-- Links do Jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script>
-    //select the button and give the ability to hide
-    $(document).ready(function(){
-      $("#esconder").click(function(){
-        $("main").hide(1000);
-      });
-      //gives to the button the ability to show 
-      $("#mostrar").click(function(){
-        $("main").show(1000);
-      });
-      $("#user_part").mouseenter(function(){
-    alert("Chegou sua vez de preecher!!! Amasaa e mostra como seu curriculo é lindo✨");
-  });
-      
-    });
-  </script>
+    <!-- Link do documento  CSS e JavaScript(endpoints) -->
+    <link rel="stylesheet" href="index.css">
+    <script src="../db.js"></script>
+  
     <title>Resume</title>
 </head>
 <body>
+    <!-- Link do JS AJAX -->
+    <script src="../Backend/script.js"></script>
+    <script>
+        //select the button and give the ability to hide
+        $(document).ready(function(){
+          $("#esconder").click(function(){
+            $("main").hide(1000);
+          });
+          //gives to the button the ability to show 
+          $("#mostrar").click(function(){
+            $("main").show(1000);
+          });
+          $("#user_part").mouseenter(function(){
+        alert("Chegou sua vez de preecher!!! Amasaa e mostra como seu curriculo é lindo✨");
+      });
+          
+        });
+      </script>
 
     <main>
     <header>
@@ -200,9 +206,11 @@
     <section class="db_manipulacao">
         <h3>Profile</h3> 
 
-        <form action="">
-            <label for="name">Nome:</label><br>
+        <form id="profile-form" action="">
+            <label for="nome">Nome:</label><br>
             <input type="text" id="nome" name="nome"><br>
+            <label for="email">E-mail:</label><br>
+            <input type="email" id="email" name="email"><br>
             <label for="descricao">Descrição:</label><br>
             <input type="text" id="descricao" name="descricao"><br>
             <label for="lname">Idade:</label><br>
@@ -217,13 +225,17 @@
 
         <form action="">
             <label for="name_empresa">Nome da empresa:</label><br>
-            <input type="text" id="nome_empresa" name="nome_empresa"><br>
+            <input type="text" id="nome_empresa" name="nome_empresa">
+            <br>
             <label for="d_inicio">Data de inicio:</label><br>
-            <input type="text" id="d_inicio" name="d_inicio"><br>
+            <input type="date" id="d_inicio" name="d_inicio">
+            <br>
             <label for="d_fim">Data de finalização:</label><br>
-            <input type="text" id="d_fim" name="d_fim"><br>
+            <input type="date" id="d_fim" name="d_fim">
+            <br>
             <label for="cargo">Cargo:</label><br>
-            <input type="text" id="cargo" name="cargo"><br>
+            <input type="text" id="cargo" name="cargo">
+            <br>
             <label for="descricao_experiencia">Descrição da experiencia:</label><br>
             <input type="text" id="descricao_experiencia" name="descricao_experiencia">
             <br><br>
@@ -233,34 +245,120 @@
 
     <section class="db_manipulacao">
         <h3>Formação</h3>
+
+        <form action="">
+            <label for="name_empresa">Id Curso :</label><br>
+            <input type="text" id="curso" name="curso">
+            <br>
+            <label for="d_inicio">Data de inicio:</label><br>
+            <input type="date" id="d_inicio" name="d_inicio">
+            <br>
+            <label for="d_fim">Data de finalização:</label><br>
+            <input type="date" id="d_fim" name="d_fim">
+            <br>
+            <label for="cargo">Descrição:</label><br>
+            <input type="text" id="descricao" name="descricao">
+            <br><br>
+            <input class="button" type="submit" value="Salvar">
+        </form>
+
     </section>
 
     <section class="db_manipulacao">
         <h3>Habilidades</h3>
+
+        <form action="">
+            <label for="id_habilidade">Id Habilidade:</label><br>
+            <input type="text" id="id_curso" name="id_curso">
+            <br>
+            <label for="habilidade1">Habilidade 1</label><br>
+            <input type="text" id="habilidade1" name="habilidade1">
+            <br>
+            <label for="habilidade2">Habilidade 2</label><br>
+            <input type="text" id="habilidade2" name="habilidade2">
+            <br>
+            <label for="habilidade3">Habilidade 3</label><br>
+            <input type="text" id="habilidade3" name="habilidade3">
+            <br>
+            <label for="habilidade4">Habilidade 4</label><br>
+            <input type="text" id="habilidade4" name="habilidade4">
+            <br>
+            <label for="habilidade5">Habilidade 5</label><br>
+            <input type="text" id="habilidade5" name="habilidade5">
+            <br><br>
+            <input class="button" type="submit" value="Salvar">
+        </form>
+
     </section>
 
     <section class="db_manipulacao">
         <h3>Head Curriculo</h3>
+
+        <form action="">
+            <label for="id_nome">Nome Completo:</label><br>
+            <input type="text" id="nome" name="nome"><br>
+            <label for="cargo">Cargo:</label><br>
+            <input type="text" id="cargo" name="cargo"><br>
+            <label for="foto">Foto:</label><br>
+            <input type="file" id="foto" name="foto">
+            <br><br>
+            <input class="button" type="submit" value="Salvar">
+        </form>
+
     </section>
 
     <section class="db_manipulacao">
         <h3>Personalidades</h3>
+
+        <form action="">
+            <label for="id_personalidade">Id Personalidade:</label><br>
+            <input type="text" id="id_personalidade" name="id_personalidade">
+            <br>
+            <label for="personalidade1">Personalidade 1</label><br>
+            <input type="text" id="personalidade1" name="personalidade1">
+            <br>
+            <label for="personalidade2">Personalidade 2</label><br>
+            <input type="text" id="personalidade2" name="personalidade2">
+            <br>
+            <label for="personalidade3">Personalidade 3</label><br>
+            <input type="text" id="personalidade3" name="personalidade3">
+            <br>
+            <label for="personalidade4">Personalidade 4</label><br>
+            <input type="text" id="personalidade4" name="personalidade4">
+            <br>
+            <label for="personalidade5">Personalidade 5</label><br>
+            <input type="text" id="personalidade5" name="personalidade5">
+            <br><br>
+            <input class="button" type="submit" value="Salvar">
+        </form>
+
     </section>
 
     <section class="db_manipulacao">
         <h3>Realizações</h3>
+
+        <form action="">
+            <label for="id_realizacao">Realização:</label><br>
+            <input type="text" id="id_realizacao" name="id_ realizacao">
+            <br>
+            <label for="data">Data de finalização:</label><br>
+            <input type="date" id="data" name="data">
+            <br>
+            <label for="cargo">Descrição:</label><br>
+            <input type="text" id="descricao" name="descricao">
+            <br><br>
+            <input class="button" type="submit" value="Salvar">
+        </form>
+
     </section>
-
-
-<!-- <script src="db.js">
-$(document).ready(function(){
-  $("button").click(function(){
-    $("main").hide();
-  });
-});
-
-
-</script> -->
+    <div class="envia_form">
+    <input class="button_envia" type="submit" value="Enviar">
+    </div>
+    <div id="main">
+        <h2> Ponderada da Semana</h2>
+        <strong>O terror de qualquer estudante, pelo menos o meu.</strong>
+        <p>Tentei pegar o código que deram de exemlo e adaptalo, assim, vendo com funciona o AJAX, sim, o codigo e não o produto de limpeza</p>
+    </div>
 </body>
 
 <footer>

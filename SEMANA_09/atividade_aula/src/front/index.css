@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+}
+
+html {
+    font-family: 'Lato', sans-serif;
+    max-width: 1024px;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    margin: auto;
+    background-color: #672093;
+  }
+
+  body{
+    margin-top: 5em;
+    margin-bottom: 30px;
+    background-color: azure;
+    border-radius: 15px;
+  }
+
+ section{
+    margin: auto;
+    padding: 15px;
+ }
+
+ button{
+    margin: 15px;
+    border: #1e092b;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #ae71d5;
+ }
+
+ button:hover{
+    background-color: #9a00f3;
+    box-shadow: 0 10px 10px 0 rgba(121, 27, 138, 0.518), 0 6px 20px 0 rgba(98, 23, 115, 0.518);
+
+ }
+
+ input{
+    border-radius: 15px;
+    border-style: none;
+    background-color: beige;
+ }
+
+ #mensagens{
+   border-radius: 20px;
+   padding: 10px;
+   background-color: #c693e5;
+ }
